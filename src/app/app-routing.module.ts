@@ -5,6 +5,8 @@ import { UsuarioComponent } from './components/usuario/usuario.component';
 import { ClienteComponent } from './components/usuario/cliente/cliente.component';
 import { EmpresaComponent } from './components/usuario/empresa/empresa.component';
 import { ProveedorComponent } from './components/usuario/proveedor/proveedor.component';
+import { EncabezadoComponent } from './components/shared/encabezado/encabezado.component';
+import { LogeoComponent } from './components/usuario/logeo/logeo.component';
 
 const routes: Routes = [
   {path: 'home', component: LandingComponent},
@@ -12,8 +14,9 @@ const routes: Routes = [
   {path: 'cliente', component: ClienteComponent},
   {path: 'empresa', component: EmpresaComponent},
   {path: 'proveedor', component: ProveedorComponent},
-  
-
+  {path: 'logeo', component: LogeoComponent},
+  {path: '', pathMatch: 'full', redirectTo: 'home'},
+  {path: 'path: ', pathMatch: 'full', redirectTo: 'home'}
 ];
 
 @NgModule({
