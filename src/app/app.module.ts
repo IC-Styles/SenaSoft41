@@ -22,6 +22,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogeoComponent } from './components/usuario/logeo/logeo.component';
 import { EncabezadoComponent } from './components/shared/encabezado/encabezado.component';
+import { RegistroComponent } from './components/usuario/registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { EncabezadoComponent } from './components/shared/encabezado/encabezado.c
     EmpresaComponent,
     ProveedorComponent,
     LogeoComponent,
-    EncabezadoComponent
+    EncabezadoComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
