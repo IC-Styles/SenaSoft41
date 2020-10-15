@@ -17,6 +17,6 @@ export class NavbatrComponent implements OnInit {
   }
   salir()
   {
-    this.auth.logout();
+    this.auth.logout({returnTo: '/home'} );
   }
 }
