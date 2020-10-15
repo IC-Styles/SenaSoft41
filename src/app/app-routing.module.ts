@@ -8,6 +8,8 @@ import { ProveedorComponent } from './components/usuario/proveedor/proveedor.com
 import { EncabezadoComponent } from './components/shared/encabezado/encabezado.component';
 import { LogeoComponent } from './components/usuario/logeo/logeo.component';
 import { RegistroComponent } from './components/usuario/registro/registro.component';
+import { TercerosComponent } from './terceros/terceros.component';
+import { RegistroClienteComponent } from './components/registro-cliente/registro-cliente.component';
 
 const routes: Routes = [
   {path: 'home', component: LandingComponent},
@@ -17,6 +19,10 @@ const routes: Routes = [
   {path: 'proveedor', component: ProveedorComponent},
   {path: 'logeo', component: LogeoComponent},
   {path: 'registro', component: RegistroComponent},
+  {path: 'tercero', component: TercerosComponent,
+  children: [
+    {path:'registroC', component: RegistroClienteComponent}
+  ]},
   {path: '', pathMatch: 'full', redirectTo: 'home'}
 ];
 

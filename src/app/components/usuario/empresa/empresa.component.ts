@@ -11,8 +11,8 @@ import {MatTableDataSource} from '@angular/material/table';
   styleUrls: ['./empresa.component.css']
 })
 export class EmpresaComponent implements AfterViewInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource<inventario>(productos);
+  displayedColumns: string[] = ['fecha', 'descripcion', 'valor', 'cantidad'];
+  dataSource = new MatTableDataSource<factura>(facturas);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -21,69 +21,55 @@ export class EmpresaComponent implements AfterViewInit {
   }
 }
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-export interface inventario{
-  nombre: string;
+export interface factura{
+  fecha: string;
   descripcion: string;
-  img: string;
-  precio: string;
+  valor: string;
   cantidad: string;
-  idx?: number;
+  
 };
 
-const productos:inventario[] = [
+const facturas:factura[] = [
   {
-    nombre: 'p1',
+    fecha: 'xx/xx/xxxx',
     descripcion: 'xxx',
-    img: 'assets/img/ER-Hackathon.png',
-    precio: 'xxx',
+    valor: 'xxxxxxx',
     cantidad:'xxx'
   },
   {
-    nombre: 'p2',
+    fecha: 'xx/xx/xxxx',
     descripcion: 'xxx',
-    img: 'assets/img/ER-Hackathon.png',
-    precio: 'xxx',
+    valor: 'xxxxxxx',
     cantidad:'xxx'
   },
   {
-    nombre: 'p3',
+    fecha: 'xx/xx/xxxx',
     descripcion: 'xxx',
-    img: 'assets/img/ER-Hackathon.png',
-    precio: 'xxx',
+    valor: 'xxxxxxx',
     cantidad:'xxx'
   },
   {
-    nombre: 'p4',
+    fecha: 'xx/xx/xxxx',
     descripcion: 'xxx',
-    img: 'assets/img/ER-Hackathon.png',
-    precio: 'xxx',
+    valor: 'xxxxxxx',
     cantidad:'xxx'
   },
   {
-    nombre: 'p5',
+    fecha: 'xx/xx/xxxx',
     descripcion: 'xxx',
-    img: 'assets/img/ER-Hackathon.png',
-    precio: 'xxx',
+    valor: 'xxxxxxx',
     cantidad:'xxx'
   },
   {
-    nombre: 'p6',
+    fecha: 'xx/xx/xxxx',
     descripcion: 'xxx',
-    img: 'assets/img/ER-Hackathon.png',
-    precio: 'xxx',
+    valor: 'xxxxxxx',
     cantidad:'xxx'
   },
   {
-    nombre: 'p7',
+    fecha: 'xx/xx/xxxx',
     descripcion: 'xxx',
-    img: 'assets/img/ER-Hackathon.png',
-    precio: 'xxx',
+    valor: 'xxxxxxx',
     cantidad:'xxx'
   }
 ];

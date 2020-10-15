@@ -24,6 +24,8 @@ import { LogeoComponent } from './components/usuario/logeo/logeo.component';
 import { EncabezadoComponent } from './components/shared/encabezado/encabezado.component';
 import { RegistroComponent } from './components/usuario/registro/registro.component';
 import { AuthModule, AuthService } from '@auth0/auth0-angular';
+import { TercerosComponent } from './terceros/terceros.component';
+import { RegistroClienteComponent } from './components/registro-cliente/registro-cliente.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { AuthModule, AuthService } from '@auth0/auth0-angular';
     ProveedorComponent,
     LogeoComponent,
     EncabezadoComponent,
-    RegistroComponent
+    RegistroComponent,
+    TercerosComponent,
+    RegistroClienteComponent
   ],
   imports: [
     BrowserModule,
