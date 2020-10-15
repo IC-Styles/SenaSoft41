@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-landing',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private auth: AuthService ) { }
 
   ngOnInit(): void {
   }
-
+  // tslint:disable-next-line: typedef
+  logeo(){
+    // tslint:disable-next-line: no-unused-expression
+    this.auth.loginWithRedirect();
+  }
 }

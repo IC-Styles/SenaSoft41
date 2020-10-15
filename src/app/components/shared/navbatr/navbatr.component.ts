@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-navbatr',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbatrComponent implements OnInit {
 
-  constructor() { }
+  constructor(public auth: AuthService) { }
 
   ngOnInit(): void {
   }
-
+  logeo(){
+    this.auth.loginWithRedirect();
+  }
+  salir()
+  {
+    this.auth.logout();
+  }
 }

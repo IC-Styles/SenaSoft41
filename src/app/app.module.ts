@@ -23,6 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogeoComponent } from './components/usuario/logeo/logeo.component';
 import { EncabezadoComponent } from './components/shared/encabezado/encabezado.component';
 import { RegistroComponent } from './components/usuario/registro/registro.component';
+import { AuthModule, AuthService } from '@auth0/auth0-angular';
+
 
 @NgModule({
   declarations: [
@@ -51,10 +53,14 @@ import { RegistroComponent } from './components/usuario/registro/registro.compon
     MatSortModule,
     MatTooltipModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AuthModule.forRoot({
+      domain: 'dev-qpngoss5.us.auth0.com',
+      clientId: 'bPeEsHxtbxiiI6NNr8Oe1oe1t13fDQ3C'
+    })
 
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
